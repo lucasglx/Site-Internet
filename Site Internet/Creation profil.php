@@ -1,7 +1,46 @@
 <?php 
  
 $bdd = new PDO('mysql:host=localhost;dbname=BDD-MSH;charset=utf8', 'root', 'root');
-// Vérification de la validité des informations
+
+if (isset($_POST['forminscription']))
+{
+    if(!empty($_POST['pseudo']) AND !empty($_POST['surname']) AND !empty($_POST['name']) AND !empty($_POST['address']) AND !empty($_POST['city']) AND !empty($_POST['zip']) AND !empty($_POST['country']) AND !empty($_POST['phone']) AND !empty($_POST['email']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2']))
+    {
+        $pseudo = htmlspecialchars($_POST['pseudo']);
+        $surname = htmlspecialchars($_POST['surname']);
+        $name = htmlspecialchars($_POST['name']);
+        $address = htmlspecialchars($_POST['address']);
+        $city = htmlspecialchars($_POST['city']);
+        $zip = htmlspecialchars($_POST['zip']);
+        $country = htmlspecialchars($_POST['country']);
+        $phone = htmlspecialchars($_POST['phone']);
+        $email = htmlspecialchars($_POST['email']);
+        $mdp = sha1 ($_POST['mdp']);
+        $mdp2 = sha1 ($_POST['mdp2']);
+        
+        $pseudolength = strlen($pseudo);
+        if ($pseudolength <= 255)
+        {
+            if (filter_var($))
+                if($mdp == $mdp2)
+                {
+
+                }
+                else
+                {
+                    $erreur = "Les mots de passe ne correspondent pas !"
+                }
+        }
+        else
+        {
+            $erreur = "Le pseudo ne doit pas dépasser 255 caractères !";
+        }
+    }
+    else
+    {
+        $erreur = "Tous les champs ne sont pas remplis ! ";
+    }
+}
 
 ?>
 
@@ -49,16 +88,22 @@ $bdd = new PDO('mysql:host=localhost;dbname=BDD-MSH;charset=utf8', 'root', 'root
                     <label for="surname">Prénom :
                     </label>
                     <input type="text" name="surname" id="surname" required />
-             
+                    
                     <label for="name">Nom :
                     </label>
                     <input type="text" name="name" id="name" required />
+                
                 </p>
                 
                 <p>
+                    <label for="pseudo">Pseudo :
+                    </label>
+                    <input type="text" name="pseudo" id="pseudo" required />
+                    
                     <label for="address">Adresse :
                     </label>
                     <input type="text" name="address" id="address" required />
+                    
                 </p>
                 
                 <p>
@@ -103,13 +148,17 @@ $bdd = new PDO('mysql:host=localhost;dbname=BDD-MSH;charset=utf8', 'root', 'root
                     <input type="button" value="Annuler" onclick="history.go(-1)" />
                     </form>
                 
-                    <a href="Configuration%20maison.php"><input type="submit" value="Continuer"/></a>
-                
-
-                
+                    
+                    <input type="submit" name="forminscription" value="Continuer"/>
                 
             </fieldset>
 
+        <?php
+        if(isset($erreur))
+        {
+            echo $erreur;
+        }
+        ?>
     </body>
 
 </html>
