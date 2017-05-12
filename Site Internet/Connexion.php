@@ -33,14 +33,13 @@ if(isset($_POST['formconnect']))
 }
 
 ?>
-
 <html>
-    
+
   <head>
 
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="main.css" />
-    <title>Connexion</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>MySmartHouse</title>
 
   </head>
 
@@ -48,27 +47,53 @@ if(isset($_POST['formconnect']))
 
         <div class="topnav">
             <a class="active" href="#fr/en">Fr/En</a>
-            <a href="Page%20d'accueil.html">Accueil</a>
-            <a href="Qui%20sommes%20nous.html">Qui sommes nous ?</a>
-            <a href="Contact.html">Contact</a>
-            <a href="FAQ.html">FAQ</a>
+            <a href="Page%20d'accueil.php">Accueil</a>
+            <a href="Qui%20sommes%20nous.php">Qui sommes nous ?</a>
+            <a href="Contact.php">Contact</a>
+            <a href="FAQ.php">FAQ</a>
         </div>
-
+         
         <div class="bienvenue">
-               <img src= "logomysmarthousepetit.png" class="logoentreprise" alt="Logo entreprise"  />
-            <h1>Connexion</h1>
+               <img src= "img/logomysmarthousepetit.png" class="logoentreprise" alt="Logo entreprise"  />
+            <h1>Bienvenue sur MySmartHouse</h1>
         </div>
-         <br /><br />
-         <form method="POST" action="">
-            <input type="email" name="mailconnect" placeholder="Mail " />
-            <input type="password" name="mdpconnect" placeholder="Mot de passe " />
-            <input type="submit" name="formconnect"  value="Se connecter" />
-         </form>
-         <?php
+            
+            <fieldset>
+                <legend>Connexion</legend>
+        
+                <p>
+                    <label for="email">Adresse mail :
+                    </label><br>
+                    <form method="POST" action="">
+                    <input type="email" name="mailconnect" placeholder="Mail " />
+                
+                
+                <br>
+                    <label for="password">Mot de passe :
+                    </label><br>
+                    <input type="password" name="mdpconnect" placeholder="Mot de passe " />
+                
+                
+                <p>
+                    <input type="submit" name="formconnect"  value="Se connecter" />
+                </p>
+                
+                <p>
+                    <a href="Inscription.php">Première connexion ?</a>
+                </p>
+                        
+                </form>
+                <?php
          if(isset($erreur)) {
             echo '<font color="red">'.$erreur."</font>";
          }
          ?>
-      
-   </body>
+                
+            </fieldset>
+        
+        
+            
+                
+       
+    </body>
 </html>

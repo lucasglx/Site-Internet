@@ -12,10 +12,10 @@
         
         <div class="topnav">
             <a class="active" href="#fr/en">Fr/En</a>
-            <a href="Page%20d'accueil.html">Accueil</a>
-            <a href="Qui%20sommes%20nous.html">Qui sommes nous ?</a>
-            <a href="Contact.html">Contact</a>
-            <a href="FAQ.html">FAQ</a>
+            <a href="Page%20d'accueil.php">Accueil</a>
+            <a href="Qui%20sommes%20nous.php">Qui sommes nous ?</a>
+            <a href="Contact.php">Contact</a>
+            <a href="FAQ.php">FAQ</a>
         </div>
 
         <div class="contacteznous">
@@ -29,7 +29,7 @@
                 <legend>Différents moyens de nous contacter</legend>
                 
                 <p>
-                        <button formaction="mailto:mysmarthouse.contact@gmail.com">E-mail</button>       
+                    <a href="mailto:mysmarthouse.contact@gmail.com">E-mail</a>      
                 </p>
                 
                 <p>     Téléphone :

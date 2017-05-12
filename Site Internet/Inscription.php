@@ -68,7 +68,7 @@ if(isset($_POST['forminscription'])) {
   <head>
 
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Création profil</title>
 
   </head>
@@ -77,10 +77,10 @@ if(isset($_POST['forminscription'])) {
 
         <div class="topnav">
             <a class="active" href="#fr/en">Fr/En</a>
-            <a href="Page%20d'accueil.html">Accueil</a>
-            <a href="Qui%20sommes%20nous.html">Qui sommes nous ?</a>
-            <a href="Contact.html">Contact</a>
-            <a href="FAQ.html">FAQ</a>
+            <a href="Page%20d'accueil.php">Accueil</a>
+            <a href="Qui%20sommes%20nous.php">Qui sommes nous ?</a>
+            <a href="Contact.php">Contact</a>
+            <a href="FAQ.php">FAQ</a>
         </div>
 
         <div class="bienvenue">
