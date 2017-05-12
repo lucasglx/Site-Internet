@@ -81,7 +81,11 @@ if(isset($_POST['formconnect']))
                 <p>
                     <a href="Inscription.php">Première connexion ?</a>
                 </p>
-                        
+                
+                <p>
+                    <a href="file:///mnt/monster/home/eleves/2019/pchayet/Bureau/APP/oublie_mdp.html">Mot de passe oublié ?</a>
+                </p>        
+                
                 </form>
                 <?php
          if(isset($erreur)) {
