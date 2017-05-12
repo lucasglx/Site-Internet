@@ -1,0 +1,118 @@
+head {
+    font-family: Trebuchet MS, Arial, Verdana, serif;
+}
+
+
+body {
+    margin:0;
+    font-family: Trebuchet MS, Arial, Verdana, serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #0000FF;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #fff;
+    color: black;
+}
+
+legend {
+	 margin-left : auto ;
+     margin-right : auto ; 
+     display:table-caption ;
+     padding : inherit ;
+     width : 140px ;
+     margin-top : -20px ;
+     text-align : center ;
+     background-color : #FFFFFF ;
+ 
+}
+
+fieldset {
+    border-radius: 8px;
+}
+.logoentreprise{
+    vertical-align: middle;
+    float: right;
+    height: auto; 
+    width: auto; 
+    max-width: 150px; 
+    max-height: 150px;
+}
+.bienvenue {
+    text-align: center;
+}
+
+.logoentreprisecontact {
+    float: left;
+    vertical-align:middle;
+}
+
+.contacteznous {
+    text-align: center
+}
+
+.contact {
+    border-radius: 8px;
+    border: solid;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align:text-bottom;
+}
+
+.foireauxquestions {
+    text-align: center;
+}
+
+.logoentreprisefaq {
+    float: left;
+    vertical-align:middle;
+}
+
+.configuration maison {
+    text-align: center;
+}
+
+h2 { 
+  color:white;
+  font-weight: bold;
+}
+
+
+
+.photo {
+  
+  height: auto; 
+  width: auto; 
+  max-width: 100px; 
+  max-height: 100px;
+
+}
+
+
+span.highlight { 
+ background-color: black ; 
+}
+
+figure {
+    display:inline-block;
+}
