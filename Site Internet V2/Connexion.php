@@ -81,6 +81,10 @@ if(isset($_POST['formconnect']))
                 <p>
                     <a href="Inscription.php">Première connexion ?</a>
                 </p>
+                
+                <p>
+                    <a href="oubli_MDP.php">Mot de passe oublié ?</a>     
+                </p>
                         
                 </form>
                 <?php

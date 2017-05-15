@@ -195,3 +195,48 @@ h1
   input.cmn-toggle-round:checked + label:after {
     margin-left: 60px;
   }
+
+.logoentreprisecontact {
+    float: left;
+    vertical-align:middle;
+    max-width: 150px; 
+    max-height: 150px;
+    margin-right: 10px; 
+    margin-top: 0px;
+}
+
+.contacteznous {
+    text-align: center
+}
+
+.contact {
+    border-radius: 8px;
+    border: solid;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align:text-bottom;
+}
+
+.foireauxquestions {
+    text-align: center;
+}
+
+.logoentreprisefaq {
+    float: left;
+    vertical-align:middle;
+}
+
+.configuration maison {
+    text-align: center;
+}
+
+h2 { 
+  color:black;
+  font-weight: bold;
+  margin-left: 40px;
+  margin-right: 40px; 
+}
+
+

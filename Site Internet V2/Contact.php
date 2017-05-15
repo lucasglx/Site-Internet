@@ -19,7 +19,7 @@
         </div>
 
         <div class="contacteznous">
-            <p><img src= "logomysmarthousepetit.png" class="logoentreprisecontact" alt="Logo entreprise"  /></p>
+            <p><img src= "img/logomysmarthousepetit.png" class="logoentreprisecontact" alt="Logo entreprise"  /></p>
         
             <h1>Contactez-nous</h1>
         </div>
@@ -29,7 +29,7 @@
                 <legend>Différents moyens de nous contacter</legend>
                 
                 <p>
-                    <a href="mailto:mysmarthouse.contact@gmail.com">E-mail</a>      
+                        <a href="mailto:mysmarthouse.contact@gmail.com" class="emailbutton" target="_blank"><img src="img/button.png" alt="Email" align="middle"></a>     
                 </p>
                 
                 <p>     Téléphone :

@@ -12,17 +12,17 @@
 
         <div class="topnav">
             <a class="active" href="#fr/en">Fr/En</a>
-            <a href="Page%20d'accueil.html">Accueil</a>
-            <a href="Qui%20sommes%20nous.html">Qui sommes nous ?</a>
-            <a href="Contact.html">Contact</a>
-            <a href="FAQ.html">FAQ</a>
+            <a href="Page%20d'accueil.php">Accueil</a>
+            <a href="Qui%20sommes%20nous.php">Qui sommes nous ?</a>
+            <a href="Contact.php">Contact</a>
+            <a href="FAQ.php">FAQ</a>
         </div>
 
 
         
          
         <div class="bienvenue">
-               <img src= "logomysmarthousepetit.png" class="logoentreprise" alt="Logo entreprise"  />
+               <img src= "img/logomysmarthousepetit.png" class="logoentreprise" alt="Logo entreprise"  />
             <h1>Bienvenue sur MySmartHouse</h1>
         </div>
             
