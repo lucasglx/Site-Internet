@@ -55,7 +55,7 @@
             
         <figure>
             
-            <p><img src="img/julie.png" class="photo" alt="Photo de Julie" align="middle" height="100" width="100"/> Julie Lembourg, 20 ans : <I>"Le Sky avant tout." </I>
+            <p><img src="img/julie.png" class="photo" alt="Photo de Julie" align="middle" height="100" width="100"/> Julie Lembourg, 20 ans : <I>"En route vers le futur" </I>
             </p>
             
         </figure>
@@ -77,7 +77,7 @@
         
         <figure>
             
-            <p><img src="img/paul-emile.png" class="photo" alt="Photo de Paul-emile" align="middle" height="100" width="100"/> Paul-Emile Chayet, 21 ans :<I>"C'est quoi l'APP ?" </I></p>
+            <p><img src="img/paul-emile.png" class="photo" alt="Photo de Paul-emile" align="middle" height="100" width="100"/> Paul-Emile Chayet, 21 ans :<I>"" </I></p>
             
         </figure>
         

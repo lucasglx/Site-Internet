@@ -84,7 +84,7 @@ if(isset($_POST['forminscription'])) {
         </div>
 
         <div class="bienvenue">
-               <img src= "logomysmarthousepetit.png" class="logoentreprise" alt="Logo entreprise"  />
+               <img src= "img/logomysmarthousepetit.png" class="logoentreprise" alt="Logo entreprise"  />
             <h1>Inscription</h1>
         </div>
          <br /><br />

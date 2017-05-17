@@ -19,7 +19,7 @@
         </div>
         
         <div class="foireauxquestions">
-            <p><img src= "logomysmarthousepetit.png" class="logoentreprisefaq" alt="Logo entreprise"  /></p>
+            <p><img src= "img/logomysmarthousepetit.png" class="logoentreprisefaq" alt="Logo entreprise"  /></p>
             <h1>FAQ</h1>
         </div>
             
