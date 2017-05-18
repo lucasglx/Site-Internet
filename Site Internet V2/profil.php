@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$bdd = new PDO('mysql:host=localhost;dbname=BDD-MSH;charset=utf8', 'root', 'root');
+$bdd = new PDO('mysql:host=127.0.0.1:8889;dbname=bdd-msh;charset=utf8', 'root', 'root');
 
 if(isset($_GET['id']) AND $_GET['id'] > 0) {
    $getid = intval($_GET['id']);
@@ -13,20 +13,22 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
    <head>
       <title>MySmartHouseConnexion</title>
       <meta charset="UTF-8" />
-      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="main.css" />
    </head>
 
    <body>
       <div class="topnav">
             <a class="active" href="#fr/en">Fr/En</a>
-            <a href="Page%20d'accueil.php">Accueil</a>
-            <a href="Qui%20sommes%20nous.php">Qui sommes nous ?</a>
-            <a href="Contact.php">Contact</a>
-            <a href="FAQ.php">FAQ</a>
+            <a href="pg.php">Accueil</a>
+            <a href="Qui%20sommes%20nous%20connecte.php">Qui sommes nous ?</a>
+            <a href="Contactconnecte.php">Contact</a>
+            <a href="FAQconnecte.php">FAQ</a>
+            <a href = "edition%20profil.php">Editer son profil</a>
+            <a href = "deconnexion.php">Deconnexion</a>
       </div>
 
       <div align="center">
-         <h2>Profil de <?php echo $userinfo['pseudo']; ?></h2>
+         <h1>Profil de <?php echo $userinfo['pseudo']; ?></h1>
          <br /><br />
          Pseudo = <?php echo $userinfo['pseudo']; ?>
          <br />
@@ -36,8 +38,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
          if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id']) {
          ?>
          <br />
-         <a href="edition profil.php">Editer mon profil</a>
-         <a href="deconnexion.php">Se déconnecter</a>
+
          <?php
          }
          ?>

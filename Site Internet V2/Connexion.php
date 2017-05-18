@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$bdd = new PDO('mysql:host=localhost;dbname=BDD-MSH', 'root', 'root');
+$bdd = new PDO('mysql:host=127.0.0.1:8889;dbname=bdd-msh', 'root', 'root');
 
 if(isset($_POST['formconnexion'])) {
    $mailconnect = htmlspecialchars($_POST['mailconnect']);
@@ -41,9 +41,9 @@ if(isset($_POST['formconnexion'])) {
      <div class="topnav">
             <a class="active" href="#fr/en">Fr/En</a>
             <a href="Page%20d'accueil.php">Accueil</a>
-            <a href="Qui%20sommes%20nous.php">Qui sommes nous ?</a>
-            <a href="Contact.php">Contact</a>
-            <a href="FAQ.php">FAQ</a>
+            <a href="Qui%20sommes%20nous%20nonconnecte.php">Qui sommes nous ?</a>
+            <a href="Contactnonconnecte.php">Contact</a>
+            <a href="FAQnonconnecte.php">FAQ</a>
         </div>
          
         <div class="bienvenue">

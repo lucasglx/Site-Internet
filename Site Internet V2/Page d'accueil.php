@@ -16,9 +16,9 @@
          <div class="topnav">
             <a class="active" href="#fr/en">Fr/En</a>
             <a href="Page%20d'accueil.php">Accueil</a>
-            <a href="Qui%20sommes%20nous.php">Qui sommes nous ?</a>
-            <a href="Contact.php">Contact</a>
-            <a href="FAQ.php">FAQ</a>
+            <a href="Qui%20sommes%20nous%20nonconnecte.php">Qui sommes nous ?</a>
+            <a href="Contactnonconnecte.php">Contact</a>
+            <a href="FAQnonconnecte.php">FAQ</a>
         </div>
         
         <div style="padding-left:16px">

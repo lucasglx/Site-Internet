@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$bdd = new PDO('mysql:host=localhost;dbname=bdd-msh;charset=utf8', 'root', 'root');
+$bdd = new PDO('mysql:host=127.0.0.1:8889;dbname=bdd-msh;charset=utf8', 'root', 'root');
 
 if(isset($_SESSION['id'])) {
    $requser = $bdd->prepare("SELECT * FROM utilisateur WHERE id = ?");
@@ -38,8 +38,18 @@ if(isset($_SESSION['id'])) {
    <head>
       <title>MySmartHouse</title>
       <meta charset="utf-8">
+     <link rel="stylesheet" href="style.css" />
    </head>
    <body>
+        <div class="topnav">
+            <a class="active" href="#fr/en">Fr/En</a>
+            <a href="pg.php">Accueil</a>
+            <a href="Qui%20sommes%20nous%20connecte.php">Qui sommes nous ?</a>
+            <a href="Contactconnecte.php">Contact</a>
+            <a href="FAQconnecte.php">FAQ</a>
+            <a href = "deconnexion.php">Deconnexion</a>
+      </div>
+
       <div align="center">
          <h2>Edition de mon profil</h2>
          <div align="left">
@@ -57,6 +67,9 @@ if(isset($_SESSION['id'])) {
             <?php if(isset($msg)) { echo $msg; } ?>
          </div>
       </div>
+     <form>
+        <input type="button" value="Retour" onclick="history.go(-1)">
+     </form>
    </body>
 </html>
 <?php   
