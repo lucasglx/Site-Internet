@@ -30,7 +30,7 @@ if(isset($_POST['forminscription'])) {
                   {
                      $insertusr = $bdd->prepare("INSERT INTO utilisateur (pseudo, nom, prénom, mail, mdp, adresse, ville, code_postal, pays, numero_tel) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                      $insertusr->execute(array($pseudo, $nom, $prénom, $mail, $mdp, $address, $city, $zip, $country, $phone));
-                     $erreur = "Votre compte a bien été créé ! <a href=\"Connexion.php\">Me connecter</a>";
+                     $erreur = "Votre compte a bien été créé ! <a href=\"logement.php\">Poursuivre l'inscription</a>";
                   } 
                    else 
                     {

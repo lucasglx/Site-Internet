@@ -16,6 +16,8 @@
             <a href="Qui%20sommes%20nous%20connecte.php">Qui sommes nous ?</a>
             <a href="Contactconnecte.php">Contact</a>
             <a href="FAQconnecte.php">FAQ</a>
+            <a href="deconnexion.php">Déconnexion</a>
+
         </div>
         
         <div class="foireauxquestions">
