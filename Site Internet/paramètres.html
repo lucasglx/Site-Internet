@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="tabss.css"/>
+    <title>MySmartHouse</title>
+
+<h1>MySmartHouse</h1>
+
+    <body>
+
+<ul id="onglets">
+	<li class="actif">Paramètres</li>
+	<li>Pièce par pièce</li>
+	
+</ul>
+
+<div id="contenu">
+
+	<div class="item"
+	<h2> </h2>
+	<ul class="menu">
+		<ul class="temperature">
+        	   <img src="temperature.png" />
+                <figcaption>Température</figcaption>
+            </ul>
+            <ul class="caméra">
+        	   <img src="camera.png" />
+                <figcaption>Caméra</figcaption>
+			</ul>
+			 <ul class="volet">
+        	   <img src="fenetre.jpg" />
+                <figcaption>Volets</figcaption>
+            </ul>
+            <ul class="mode">
+                <img src="parametre.png" />
+                <figcaption>Paramètrer les modes</figcaption>
+            </ul>
+</ul>
+
+<ul class="itembis">
+	<ul class="option economie">
+	 <img src="power.png" class="power" height="42" width="42">
+                    <p> Mode Economie </p>
+                    <p>Faites des économies tout en pensant à la planète</p>
+                    <ul class="switch">
+                        <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="cmn-toggle-1"></label>
+</ul>
+</ul>
+ <ul class="option voyage">
+                    <img src="avion.png" class="avion" height="42" width="42">
+                    <p> Mode Voyage </p>
+                    <p>Minimisez votre consommation d'énergie</p>
+                    <ul class="switch">
+                        <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="cmn-toggle-2"></label>
+                    </ul>
+                </ul>
+
+                   <ul class="option securite">
+                    <img src="cadenas.png" class="cadenas" height="42" width="42">
+                    <p> Mode Sécurité </p>
+                    <p>Quittez votre domicile l'esprit tranquille</p>
+                    <ul class="switch">
+                        <input id="cmn-toggle-3" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="cmn-toggle-3"></label>
+                    </ul>                   
+                </ul>
+                 <ul class="option automatique">
+                    <img src="ampoule.png" class="ampoule" height="42" width="42">
+                    <p> Gestion automatique de la luminosité </p>
+                    <p>S'adapte à vos besoins et évolue en temps réel selon votre environnement</p>
+                     <ul class="switch">
+                        <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="cmn-toggle-4"></label>
+                    </ul>                   
+                </ul>
+<ul>
+
+</div>
+
+<div class="item">
+	<h2>Pièce par pièce</h2>
+	<select class="item">
+            <option>Salon </option>
+            <option>Chambre 1</option>
+            <option>Chambre 2</option>
+            <option>Cuisine</option>
+            <option>Garage</option>
+            <option>Salle de bain</option>
+        </select>
+
+    </div>
+
+</div>
+</div>
+
+        <script src="tabs.js"></script>
+
+	</body>
+
+</html>
