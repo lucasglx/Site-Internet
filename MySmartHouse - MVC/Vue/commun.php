@@ -1,16 +1,16 @@
 <?php
 
 // Génère le code HTML du formulaire de connexion
-function formulaire(){
+function connexion(){
     ob_start();
     ?>
         <fieldset>
-                <legend>Connexion</legend>
+            <form method="POST" action="index.php?cible=verif">
+                <legend>Connexion</legend> <br>
         
                 <p>
                     <label for="email">Adresse mail :
                     </label><br>
-                    <form method="POST" action="">
                     <input type="email" name="mailconnect" placeholder="Mail " />
                 
                 
@@ -21,11 +21,11 @@ function formulaire(){
                 
                 
                 <p>
-                    <input type="submit" name="formconnect"  value="Se connecter" />
+                    <input type="submit" name="formconnect"  value="Se connecter"/>
                 </p>
                 
                 <p>
-                    <a href="Inscription.php">Première connexion ?</a>
+                    <a href="index.php?cible=inscription">Première connexion ?</a>
                 </p>
                 
                 <p>
@@ -228,7 +228,7 @@ function menu($contenu){
 
 // Génère le code HTML du pied de page
 // même code pour toutes les pages
-function pied(){
+function pied($pied){
     ob_start();
     ?>
         <span style="font-style:italic;">MySmartHouse</span>

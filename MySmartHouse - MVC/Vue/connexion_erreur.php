@@ -1,16 +1,16 @@
 <?php
-    $entete = entete("Mon site / Accueil non connecté");
+    $entete = entete("MySmartHouse / Accueil non connecté");
     ob_start();
     ?>
         <fieldset>
             <form method="POST" action="index.php?cible=verif">
-                Identifiant
+                Email
                 <br/>
                 <input type="text" name="identifiant"/>
                 <br/>
                 Mot de passe
                 <br/>
-                <input type="password" name="mdp"/>
+                <input type="text" name="mdp"/>
                 <br/>
                 <input type='submit'/>
             </form>
