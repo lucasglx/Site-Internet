@@ -215,7 +215,7 @@ function menu($contenu){
     ob_start();
     ?>
         <br/><li><a href="index.php?cible=accueil">Accueil</a></li>
-        <br/><li><a href="index.php?cible=utilisateur">Utilisateur</a></li>
+        <br/><li><a href="index.php?cible=contact">Contact</a></li>
         <br/><li><a href="index.php?cible=deconnexion">Deconnexion</a></li>
     <?php
     $menu = ob_get_clean();

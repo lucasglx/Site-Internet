@@ -1,11 +1,10 @@
 <?php
     // Controleur pour gérer le formulaire de connexion des utilisateurs
-
+        
     if(isset($_GET['cible']) && $_GET['cible']=="verif") { // L'utilisateur vient de valider le formulaire de connexion
         if(!empty($_POST['mail']) && !empty($_POST['mdp'])){ // L'utilisateur a rempli tous les champs du formulaire
             include("Modele/utilisateur.php");
             
-
             $reponse = mdp($db,$_POST['mail']);
             
             if($reponse->rowcount()==0){  // L'utilisateur n'a pas été trouvé dans la base de données
@@ -28,4 +27,8 @@
     } else { // La page de connexion par défaut
         include("Vue/non_connecte.php");
     }
+  
+        if(isset($_GET['cible']) && $_GET['cible']=="inscription"){
+                include("Vue/inscription.php");
+            }
 ?>

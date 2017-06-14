@@ -5,8 +5,8 @@
     <head>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="styles/base.css" />
-	<link rel="stylesheet" type="text/css" href="styles/structure.css" />
+	<link rel="stylesheet" href="Styles/base.css" />
+	<link rel="stylesheet" href="Styles/structure.css" />
         <title>
             <?php echo($titre); ?>
         </title>

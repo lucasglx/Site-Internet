@@ -1,7 +1,3 @@
-#global{
-    width: 800px;
-    margin: 0 auto;
-}
 
 #tete{
     background:#bbbbbb;
@@ -12,18 +8,6 @@
 }
 
 
-#menu{
-    float:left;
-    width:180px;
-    background:#bbbbbb;
-}
-
-#contenu{
-    width:600px;
-    min-height:400px;
-    margin-left:200px;
-    background-color: #cccccc;
-}
 
 #menu ul {
     list-style: none;

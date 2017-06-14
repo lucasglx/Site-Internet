@@ -6,20 +6,12 @@
     if(!isset($_SESSION["userID"])){ // L'utilisateur n'est pas connecté
         include("Controleur/connexion.php"); // On utilise un controleur secondaire pour éviter d'avoir un fichier index.php trop gros
         
-    if(isset($_GET['cible'])){
-            if($_GET['cible'] == 'inscription'){
-                include("Vue/inscription.php");
-            }
-        }
-        
     } else { // L'utilisateur est connecté
         if(isset($_GET['cible'])) { // on regarde la page où il veut aller
             if($_GET['cible'] == 'accueil'){
                 include("Vue/accueil.php");
-            } else if ($_GET['cible'] == "utilisateur"){
-                include("Modele/utilisateur.php");
-                $reponse = userid($db);
-                include("Vue/inscription.php");
+            } else if ($_GET['cible'] == "contact"){
+                include("Vue/contact.php");
             } else if ($_GET['cible'] == "etape2"){
                 include("Vue/etape2.php");
             } else if ($_GET['cible'] == "etape3"){

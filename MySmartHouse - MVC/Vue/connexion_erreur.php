@@ -1,4 +1,5 @@
 <?php
+    $titre = "MySmartHouse";
     $entete = entete("MySmartHouse / Accueil non connecté");
     ob_start();
     ?>
@@ -6,7 +7,7 @@
             <form method="POST" action="index.php?cible=verif">
                 Email
                 <br/>
-                <input type="text" name="identifiant"/>
+                <input type="mail" name="mail"/>
                 <br/>
                 Mot de passe
                 <br/>
@@ -21,4 +22,5 @@
     $pied = pied();
 
     include 'gabarit.php';
+    
 ?>

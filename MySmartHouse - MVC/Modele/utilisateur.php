@@ -13,8 +13,5 @@
         return $reponse;
     }
 
-    function userid($db){
-        $reponse = $db->query('SELECT id FROM utilisateur');
-        return $reponse;
-    }
+
 ?>

@@ -1,6 +1,7 @@
 <?php
+    $titre = "MySmartHouse";
     $entete = entete("MySmartHouse / Inscription");
-    $menu = image();
+    $entete = image();
     $contenu = inscription();
     $pied = pied();
 
