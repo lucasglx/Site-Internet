@@ -11,17 +11,17 @@ function connexion(){
                 <p>
                     <label for="email">Adresse mail :
                     </label><br>
-                    <input type="email" name="mailconnect" placeholder="Mail " />
+                    <input type="email" name="mail" placeholder="Mail " />
                 
                 
                 <br>
                     <label for="password">Mot de passe :
                     </label><br>
-                    <input type="password" name="mdpconnect" placeholder="Mot de passe " />
+                    <input type="password" name="mdp" placeholder="Mot de passe " />
                 
                 
                 <p>
-                    <input type="submit" name="formconnect"  value="Se connecter"/>
+                    <input type="submit" value="Se connecter"/>
                 </p>
                 
                 <p>
@@ -50,7 +50,7 @@ function inscription(){
     ob_start();
     ?>
         <div class="bienvenue">
-               <img src= "img/logomysmarthousepetit.png" class="logoentreprise" alt="Logo entreprise"  />
+               
             <h1>Inscription</h1>
         </div>
          <br/>
@@ -214,13 +214,9 @@ function entete($titre){
 function menu($contenu){
     ob_start();
     ?>
-        <div class="topnav">
-            <a class="active" href="#fr/en">Fr/En</a>
-            <a href="Page%20d'accueil.php">Accueil</a>
-            <a href="Qui%20sommes%20nous.php">Qui sommes nous ?</a>
-            <a href="Contact.php">Contact</a>
-            <a href="FAQ.php">FAQ</a>
-        </div>
+        <br/><li><a href="index.php?cible=accueil">Accueil</a></li>
+        <br/><li><a href="index.php?cible=utilisateur">Utilisateur</a></li>
+        <br/><li><a href="index.php?cible=deconnexion">Deconnexion</a></li>
     <?php
     $menu = ob_get_clean();
     return $menu;
@@ -237,6 +233,13 @@ function pied($pied){
     return $pied;
 }
 
-
+function image($image){
+    ob_start();
+    ?>
+        <img src= "img/logomysmarthousepetit.png" class="logoentreprise" alt="Logo entreprise"  />
+    <?php
+    $image = ob_get_clean();
+    return $image;
+}
 
 ?>

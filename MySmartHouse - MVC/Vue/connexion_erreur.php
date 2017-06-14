@@ -10,7 +10,7 @@
                 <br/>
                 Mot de passe
                 <br/>
-                <input type="text" name="mdp"/>
+                <input type="password" name="mdp"/>
                 <br/>
                 <input type='submit'/>
             </form>

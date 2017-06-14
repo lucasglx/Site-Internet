@@ -24,7 +24,7 @@
     }
     
     function adresse($db){
-        $insertusr = $bdd->prepare("INSERT INTO utilisateur (pseudo)");
+        $insertusr = $bdd->prepare("INSERT INTO utilisateur (adresse)");
         return $reponse;
     }
 ?>
