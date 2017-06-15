@@ -21,9 +21,6 @@
             <hr/>    
             
             <div id="corps">
-                <div id="menu">
-                    <?php echo($menu); ?>
-                </div>
                 <div id="contenu">
                     <?php echo($contenu); ?>
                 </div>

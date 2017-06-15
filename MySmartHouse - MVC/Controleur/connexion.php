@@ -1,4 +1,5 @@
 <?php
+require("Vue/commun.php");
     // Controleur pour gérer le formulaire de connexion des utilisateurs
         
     if(isset($_GET['cible']) && $_GET['cible']=="verif") { // L'utilisateur vient de valider le formulaire de connexion
@@ -28,7 +29,18 @@
         include("Vue/non_connecte.php");
     }
   
-        if(isset($_GET['cible']) && $_GET['cible']=="inscription"){
+        if(isset($_GET['cible'])) { // on regarde la page où il veut aller
+            if($_GET['cible'] == 'accueil'){
+                include("Vue/accueil.php");
+            } else if ($_GET['cible'] == "contact"){
+                include("Vue/contact.php");
+            } else if ($_GET['cible'] == "quisommesnous"){
+                include("Vue/qui_sommes_nous.php");
+            } else if ($_GET['cible'] == "faq"){
+                include("Vue/faq.php");
+            } else if ($_GET['cible']=="inscription"){
                 include("Vue/inscription.php");
+            }
+       
             }
 ?>

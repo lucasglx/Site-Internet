@@ -12,10 +12,10 @@
                 include("Vue/accueil.php");
             } else if ($_GET['cible'] == "contact"){
                 include("Vue/contact.php");
-            } else if ($_GET['cible'] == "etape2"){
-                include("Vue/etape2.php");
-            } else if ($_GET['cible'] == "etape3"){
-                include("Vue/etape3.php");
+            } else if ($_GET['cible'] == "quisommesnous"){
+                include("Vue/qui_sommes_nous.php");
+            } else if ($_GET['cible'] == "faq"){
+                include("Vue/faq.php");
            } else if ($_GET['cible'] == "deconnexion"){
                 // Détruit toutes les variables de session
                 $_SESSION = array();
@@ -29,3 +29,4 @@
                 include("Vue/accueil.php");
         }
     }
+?>

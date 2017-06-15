@@ -1,7 +1,7 @@
 <?php
     $titre = "MySmartHouse";
-    $entete = entete("Contact");
-    $contenu = contact();
+    $entete = entete();
+    $contenu = quisommesnous($quisommesnous);
     $pied = pied();
 
     include 'gabarit.php';
