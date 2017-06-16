@@ -204,10 +204,10 @@ function entete($titre){
            
         </h1>
         <div class="topnav">
-            <a href="Page%20d'accueil.php">Accueil</a>
-            <a href="index.php?cible=quisommesnous">Qui sommes nous ?</a>
-            <a href="Contact.php">Contact</a>
-            <a href="FAQ.php">FAQ</a>
+            <a href="http://localhost:8888/MySmartHouse%20-%20MVC/index.php">Accueil</a>
+            <a href="http://localhost:8888/MySmartHouse%20-%20MVC/Vue/qui_sommes_nous.php">Qui sommes nous ?</a>
+            <a href="http://localhost:8888/MySmartHouse%20-%20MVC/Vue/contact.php">Contact</a>
+            <a href="http://localhost:8888/MySmartHouse%20-%20MVC/Vue/FAQ.php">FAQ</a>
             <?php
             if (isset ($_SESSION["userID"]))
             {
@@ -304,6 +304,158 @@ function quisommesnous(){
             <?php
             $quisommesnous = ob_get_clean();
             return $quisommesnous;
+    
+}
+
+function contact(){
+    ob_start();
+    ?>
+            <div class="contacteznous">
+        
+            <h1 style="text-align:center">CONTACTEZ-NOUS</h1><br><br>
+            </div>
+
+                <fieldset>
+                <div class="logocontact">
+                <p><a href="mailto:mysmarthouse.contact@gmail.com" class="logoemail" target="_blank"><img src="http://localhost:8888/MySmartHouse%20-%20MVC/img/email.jpg" alt="Email"><p>Envoyez un mail</p></a>
+                <p>
+                </div>   
+                <div class="logocontact">
+                <p><img src="http://localhost:8888/MySmartHouse%20-%20MVC/img/telephone.jpg" class="logotelephone" alt="telephone"/></p>
+                <p><I><B>+33 1 23 45 67 89</B></I></p>
+                </div>
+                <div class="logocontact">
+                <p><a href="https://www.facebook.com/My-Smart-House-1021275438007096/?fref=ts" class="logofacebook" target="_blank"><img src="http://localhost:8888/MySmartHouse%20-%20MVC/img/facebook.png" alt="Facebook" ><p>
+                <p>Likez notre page</p></a>
+               </div>
+               </fieldset>
+               <br>
+               <br>
+               <br>
+               <h1 style="text-align:center;">TROUVEZ-NOUS FACILEMENT</h1><br>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.6883495279876!2d2.280302766448461!3d48.82476644102272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe0d3eb2ad501cb27!2sISEP!5e0!3m2!1sfr!2sfr!4v1494930808024" width="900" height="600" frameborder="0"></iframe>
+            <br><br><br>
+            <?php
+            $contact = ob_get_clean();
+            return $contact;
+    
+}
+
+function FAQ(){
+    ob_start();
+    ?>
+           <div class="foireauxquestions">
+            <p><img src= "http://localhost:8888/MySmartHouse%20-%20MVC/img/logomysmarthousepetit.png" class="logoentreprisefaq" alt="Logo entreprise"  /></p>
+            <h1>FAQ</h1>
+        </div>
+            
+        <fieldset>
+                <legend>Foire aux questions</legend>
+        
+
+        <dl>
+            <dt>Question 1 : Comment retrouver l'identifiant et le mot de passe de mon compte ?</dt>
+            <dd>&hellip; blablabla &hellip;</dd>
+            <dt>Question 2 : Comment installer mes capteurs?</dt>
+            <dd>&hellip; blablabla &hellip;</dd>
+            <dt>Question 3 : Comment trouver les numéros de série de mes capteurs?</dt>
+            <dd>&hellip; blablabla &hellip;</dd>
+            <dt>Question 4 : Où tester les produits MySmartHouse?</dt>
+            <dd>&hellip; blablabla &hellip;</dd>
+        </dl>
+
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            $("dd").hide();
+            $("dt").css("cursor", "pointer");
+            $("dt").click(function() {
+        
+            if($(this).next().is(":visible") == false) {
+                $("dd").slideUp();
+                $(this).next().slideDown();
+            }
+            });
+        });
+
+    </script>
+        </fieldset>
+            <?php
+            $FAQ = ob_get_clean();
+            return $FAQ;
+    
+}
+
+function accueil_connecte(){
+    ob_start();
+    ?>
+           <div class="pièce">
+            <p>pièce par pièce</p>
+        </div>
+        <div class="menu">
+            <div class="température">
+        	   <img src="img/tempe%CC%81rature.png" />
+                <figcaption>Température</figcaption>
+            </div>
+            <div class="caméra">
+        	   <img src="img/came%CC%81ra.png" />
+                <figcaption>Caméra</figcaption>
+
+            </div>
+            <div class="volet">
+        	   <img src="img/volet.png" />
+                <figcaption>Volet</figcaption>
+            </div>
+            <div class="mode">
+                <img src="img/mode.png" />
+                <figcaption>Paramètrer les modes</figcaption>
+            </div>
+        </div>
+        <div class="contenu">
+                <div class="option economie">
+                    <img src="img/power.png" class="power" height="42" width="42">
+                    <h1> Mode Economie </h1>
+                    <h3>Faites des économies tout en pensant à la planète</h3>
+                    <div class="switch">
+                        <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="cmn-toggle-1"></label>
+                    </div>
+                </div>
+                <div class="option voyage">
+                    <img src="img/avion.png" class="avion" height="42" width="42">
+                    <h1> Mode Voyage </h1>
+                    <h3>Minimisez votre consomation d'énergie</h3>
+                    <div class="switch">
+                        <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="cmn-toggle-2"></label>
+                    </div>
+                </div>
+                <div class="option secutite">
+                    <img src="img/cadenas.png" class="cadenas" height="42" width="42">
+                    <h1> Mode Sécurité </h1>
+                    <h3>Quittez votre domicile l'esprit tranquille</h3>
+                    <div class="switch">
+                        <input id="cmn-toggle-3" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="cmn-toggle-3"></label>
+                    </div>                   
+                </div>
+                <div class="option automatique">
+                    <img src="img/ampoule.png" class="ampoule" height="42" width="42">
+                    <h1> Gestion automatique de luminosité </h1>
+                    <h3>S'adapte à vos besoins et évolue en temps réel selon votre environnement</h3>
+                     <div class="switch">
+                        <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="cmn-toggle-4"></label>
+                    </div>                   
+                </div>
+        </div>
+
+            <?php
+            $accueil_connecte = ob_get_clean();
+            return $accueil_connecte;
     
 }
 ?>

@@ -20,12 +20,12 @@
             } else if ($_GET['cible'] == "utilisateur"){
                 include("Modele/utilisateur.php");
                 $reponse = utilisateur($db);
-            } else if ($_GET['cible'] == "etape2"){
-                include("Vue/etape2.php");
-            } else if ($_GET['cible'] == "etape3"){
-                include("Vue/etape3.php");
+            } else if ($_GET['cible'] == "contact"){
+                echo "<script>document.location.href='http://localhost:8888/MySmartHouse%20-%20MVC/Vue/contact.php'</script>";
+            } else if ($_GET['cible'] == "FAQ"){
+                echo "<script>document.location.href='http://localhost:8888/MySmartHouse%20-%20MVC/Vue/FAQ.php'</script>";
              } else if ($_GET['cible'] == "quisommesnous"){
-                include("Vue/qui_sommes_nous.php");
+                echo "<script>document.location.href='http://localhost:8888/MySmartHouse%20-%20MVC/Vue/qui_sommes_nous.php'</script>";
                 
            } else if ($_GET['cible'] == "deconnexion"){
                 // Détruit toutes les variables de session
