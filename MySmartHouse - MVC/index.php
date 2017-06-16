@@ -1,3 +1,4 @@
+
 <?php 
     session_start();
     require("Modele/connexion.php");
@@ -5,23 +6,33 @@
     
     if(!isset($_SESSION["userID"])){ // L'utilisateur n'est pas connecté
         include("Controleur/connexion.php"); // On utilise un controleur secondaire pour éviter d'avoir un fichier index.php trop gros
+
+    if(isset($_GET['cible'])){
+            if($_GET['cible'] == 'inscription'){
+                include("Vue/inscription.php");
+            }
+        }
         
     } else { // L'utilisateur est connecté
         if(isset($_GET['cible'])) { // on regarde la page où il veut aller
             if($_GET['cible'] == 'accueil'){
                 include("Vue/accueil.php");
-            } else if ($_GET['cible'] == "contact"){
-                include("Vue/contact.php");
-            } else if ($_GET['cible'] == "quisommesnous"){
+            } else if ($_GET['cible'] == "utilisateur"){
+                include("Modele/utilisateur.php");
+                $reponse = utilisateur($db);
+            } else if ($_GET['cible'] == "etape2"){
+                include("Vue/etape2.php");
+            } else if ($_GET['cible'] == "etape3"){
+                include("Vue/etape3.php");
+             } else if ($_GET['cible'] == "quisommesnous"){
                 include("Vue/qui_sommes_nous.php");
-            } else if ($_GET['cible'] == "faq"){
-                include("Vue/faq.php");
+                
            } else if ($_GET['cible'] == "deconnexion"){
                 // Détruit toutes les variables de session
                 $_SESSION = array();
-                if (isset($_COOKIE[session_name()])) {
+                /*if (isset($_COOKIE[session_name()])) {
                     setcookie(session_name(), '', time()-42000, '/');
-                }
+                }*/
                 session_destroy();
                 include("Vue/non_connecte.php");
             }
@@ -29,4 +40,3 @@
                 include("Vue/accueil.php");
         }
     }
-?>

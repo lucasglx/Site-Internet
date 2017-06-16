@@ -1,6 +1,6 @@
 <?php
     $dbname = "BDD-MSH";
-    $host='localhost';
+    $host='127.0.0.1:8889';
     $user='root';
     $pass='root';
 

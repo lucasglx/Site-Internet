@@ -5,8 +5,8 @@
     <head>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" href="Styles/base.css" />
-	<link rel="stylesheet" href="Styles/structure.css" />
+	<link rel="stylesheet" href="http://localhost:8888/MySmartHouse%20-%20MVC/Styles/base.css" />
+	<link rel="stylesheet" href="http://localhost:8888/MySmartHouse%20-%20MVC/Styles/structure.css" />
         <title>
             <?php echo($titre); ?>
         </title>

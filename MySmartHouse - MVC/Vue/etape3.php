@@ -1,5 +1,4 @@
 <?php
-    $titre = "MySmartHouse";
     $entete = entete("Mon site / Étape 3");
     $menu = menu("etape3");
     $contenu = "<h2>Contenu de l'étape 3</h2>";

@@ -1,5 +1,5 @@
 <?php
-    require("Modele/connexion.php");
+    require_once("Modele/connexion.php");
 
     // fonction qui cherche le mot de passe d'un utilisateur avec un mail dans la base de données
     function pseudo($db,$identifiant){

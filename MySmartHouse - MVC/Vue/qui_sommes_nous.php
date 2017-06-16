@@ -1,8 +1,11 @@
 <?php
-    $titre = "MySmartHouse";
+    include('commun.php');
+    $titre = 'MySmartHouse';
+    
     $entete = entete();
-    $contenu = quisommesnous($quisommesnous);
+    $contenu = quisommesnous();
     $pied = pied();
 
-    include 'gabarit.php';
+    include '../gabarit.php';
+
 ?>
