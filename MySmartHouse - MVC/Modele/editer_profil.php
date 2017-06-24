@@ -20,7 +20,7 @@ function editMail($db, $mail, $id){
 
 function editmdp($db, $mdp, $id)
 	{
-		$reponse= $db->prepare("UPDATE utilisateur SET mdp = sha1(?) WHERE id = ?");
+		$reponse= $db->prepare("UPDATE utilisateur SET mdp = ? WHERE id = ?");
 		$reponse -> execute(array($mdp, $id));
 	}
 ?>
