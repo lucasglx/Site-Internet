@@ -1,9 +1,14 @@
 <?php
 
-if(isset($_POST['forminscription'])) {
+include('Modele/inscription.php');
+
+if(isset($_GET['cible']) && $_GET['cible']=="verifinscription") {
+    
+if(isset($_POST['forminscription'])) 
+{
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $nom = htmlspecialchars($_POST['nom']);
-    $prénom = htmlspecialchars($_POST['prénom']);
+    $prenom = htmlspecialchars($_POST['prénom']);
     $mail = htmlspecialchars($_POST['mail']);
     $mail2 = htmlspecialchars($_POST['mail2']);
     $mdp = sha1($_POST['mdp']);
@@ -13,59 +18,73 @@ if(isset($_POST['forminscription'])) {
     $zip = htmlspecialchars($_POST['code_postal']);
     $country = htmlspecialchars($_POST['pays']);
     $phone = htmlspecialchars($_POST['numero_tel']);
-  
     
-   if(!empty($_POST['pseudo']) AND !empty($_POST['nom'])AND !empty($_POST['prénom']) AND !empty($_POST['mail']) AND !empty($_POST['mdp']) AND !empty($_POST['adresse']) AND !empty($_POST['ville']) AND !empty($_POST['code_postal']) AND !empty($_POST['pays']) AND !empty($_POST['numero_tel'])) {
-       include("Modele/inscription.php");
+
+   if($pseudo!="" AND $nom!="" AND 
+      $prenom!="" AND $mail!="" AND $mail2!=""
+      AND $mdp!="" AND $mdp2!="" AND $address!=""
+      AND $city!="" AND $zip!="" AND $country!=""
+      AND $phone!="") {
+      
+       include("Modele/utilisateur.php");
       $pseudolength = strlen($pseudo);
       if($pseudolength <= 255) {
          if($mail == $mail2) {
             if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-               $reqmail = $bdd->prepare("SELECT * FROM utilisateur WHERE mail = ?");
-               $reqmail->execute(array($mail));
-               $mailexist = $reqmail->rowCount();
-               if($mailexist == 0) 
+                           
+
+               $mailDoesntExist = reqmail($db,$mail);
+         
+
+               if($mailDoesntExist) 
                {
                   if($mdp == $mdp2) 
                   {
-                     $insertusr = $bdd->prepare("INSERT INTO utilisateur (pseudo, nom, prénom, mail, mdp, adresse, ville, code_postal, pays, numero_tel) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                     $insertusr->execute(array($pseudo, $nom, $prénom, $mail, $mdp, $address, $city, $zip, $country, $phone));
-                     $erreur = "Votre compte a bien été créé ! <a href=\"logement.php\">Poursuivre l'inscription</a>";
-                      include("Vue/accueil.php");
+                      
+                     insertutilisateur($db, $pseudo, $nom, $prenom, $mail, $mdp, $address, $city, $zip, $country, $phone);
+
+                      echo"<script>alert('Votre compte a bien été créé, veuillez maintenant vous connecter');document.location.href='index.php'</script>";
+        
                   } 
                    else 
                     {
-                     $erreur = "Vos mots de passe ne correspondent pas !";
-                     include("Vue/connexion_erreur.php");
+                
+                       echo"<script>alert('Vos mots de passe ne correspondent pas');document.location.href='Vue/inscription.php'</script>";
                     }
                } 
                 else 
                 {
-                  $erreur = "Adresse mail déjà utilisée !";
-                  include("Vue/connexion_erreur.php");
+                 echo"<script>alert('Adresse mail déjà utilisée !');document.location.href='Vue/inscription.php'</script>";
                 }
             } 
              else 
              {
-               $erreur = "Votre adresse mail n'est pas valide !";
-               include("Vue/connexion_erreur.php");
+               echo"<script>alert('Votre adresse mail n'est pas valide !') document.location.href='Vue/inscription.php'</script>";
+
              }
          } 
           else 
           {
-            $erreur = "Vos adresses mail ne correspondent pas !";
-              include("Vue/connexion_erreur.php");
+            echo"<script>alert('Vos adresses mail ne correspondent pas');document.location.href='Vue/inscription.php'</script>";
+
           }
       } 
-       else 
+       else
        {
-         $erreur = "Votre pseudo ne doit pas dépasser 255 caractères !";
-           include("Vue/connexion_erreur.php");
+        echo"<script>alert('Votre pseudo ne doit pas dépasser 255 caractères !');document.location.href='Vue/inscription.php'</script>";
+
        }
-   } else 
+   }
+    else
     {
-      $erreur = "Tous les champs doivent être complétés !";
-       include("Vue/connexion_erreur.php");
+      echo"<script>alert('Tous les champs doivent être remplis');document.location.href='Vue/inscription.php'</script>";
+        
+        
+        
+
     }
+
+   
+}
 }
 ?>

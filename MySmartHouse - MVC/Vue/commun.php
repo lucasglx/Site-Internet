@@ -2,6 +2,7 @@
 
 // Génère le code HTML du formulaire de connexion
 function connexion(){
+
     ob_start();
     ?>
         <fieldset>
@@ -9,9 +10,9 @@ function connexion(){
                 <legend>Connexion</legend> <br>
         
                 <p>
-                    <label for="email">Adresse mail :
+                    <label for="email">Adresse mail ou pseudo :
                     </label><br>
-                    <input type="email" name="mail" placeholder="Mail " />
+                    <input type="text" name="mail" placeholder="Mail " />
                 
                 
                 <br>
@@ -25,13 +26,9 @@ function connexion(){
                 </p>
                 
                 <p>
-                    <a href="index.php?cible=inscription">Première connexion ?</a>
+                    <a href="http://localhost:8888/MySmartHouse%20-%20MVC/Vue/inscription.php">Première connexion ?</a>
                 </p>
-                
-                <p>
-                    <a href="oubli_MDP.php">Mot de passe oublié ?</a>     
-                </p>
-                        
+                  
                 </form>
                 <?php
                     if(isset($erreur)) {
@@ -46,7 +43,7 @@ function connexion(){
 }
 
 //Génère le code HTML de l'inscription
-function inscription(){
+function forminscription(){
     ob_start();
     ?>
         <div class="bienvenue">
@@ -55,7 +52,7 @@ function inscription(){
         </div>
          <br/>
              <fieldset>
-                    <table>
+                    <form method="POST" action="http://localhost:8888/MySmartHouse%20-%20MVC/index.php?cible=verifinscription">
                 <tr>
                     <td align="right">
                      <label for="pseudo">Pseudo :</label>
@@ -177,10 +174,10 @@ function inscription(){
                   <td></td>
                   <td align="center">
                      <br />
-                     <input type="submit" name="forminscription" value="Je m'inscris" />
+                     <input type="submit" name="forminscription" value="Je m'inscris"/>
                   </td>
                </tr>
-            </table>
+            </form>
                  
          <?php
          if(isset($erreur)) {
@@ -190,30 +187,27 @@ function inscription(){
     </fieldset>
 
     <?php
-    $inscription = ob_get_clean();
-    return $inscription;
+    $forminscription = ob_get_clean();
+    return $forminscription;
 }
 
 
 // Génère le code HTML de l'entête
-function entete($titre){
+function entete(){
     ob_start();
     ?>
-        <h1>
-            <?php echo($titre);?>
-           
-        </h1>
+
         <div class="topnav">
-            <a href="http://localhost:8888/MySmartHouse%20-%20MVC/index.php">Accueil</a>
-            <a href="http://localhost:8888/MySmartHouse%20-%20MVC/Vue/qui_sommes_nous.php">Qui sommes nous ?</a>
+            <a href="http://localhost:8888/MySmartHouse%20-%20MVC/index.php?cible=accueil">Accueil</a>
+            <a href="http://localhost:8888/MySmartHouse%20-%20MVC/Vue/qui_sommes_nous.php">Qui sommes-nous ?</a>
             <a href="http://localhost:8888/MySmartHouse%20-%20MVC/Vue/contact.php">Contact</a>
             <a href="http://localhost:8888/MySmartHouse%20-%20MVC/Vue/FAQ.php">FAQ</a>
             <?php
             if (isset ($_SESSION["userID"]))
             {
+                echo '<a href="index.php?cible=verifedition">Editer son profil</a>';
                 echo '<a href="index.php?cible=deconnexion">Déconnexion</a>';
             }
-            
             ?>
         </div>
     <?php
@@ -221,18 +215,6 @@ function entete($titre){
     return $entete;
 }
 
-
-
-// le lien associé à l'étape courante est mis en couleur
-function menu($contenu){
-    ob_start();
-    ?>
-    <img src= "http://localhost:8888/MySmartHouse%20-%20MVC/img/logomysmarthousepetit.png" class="logoentreprise" alt="Logo entreprise"  />
-
-    <?php
-    $menu = ob_get_clean();
-    return $menu;
-}
 
 // Génère le code HTML du pied de page
 // même code pour toutes les pages
@@ -351,7 +333,6 @@ function FAQ(){
             
         <fieldset>
                 <legend>Foire aux questions</legend>
-        
 
         <dl>
             <dt>Question 1 : Comment retrouver l'identifiant et le mot de passe de mon compte ?</dt>
@@ -397,11 +378,11 @@ function accueil_connecte(){
         </div>
         <div class="menu">
             <div class="température">
-        	   <img src="img/tempe%CC%81rature.png" />
+        	   <img src="img/temperature.png" />
                 <figcaption>Température</figcaption>
             </div>
             <div class="caméra">
-        	   <img src="img/came%CC%81ra.png" />
+        	   <img src="img/camera.png" />
                 <figcaption>Caméra</figcaption>
 
             </div>
@@ -458,4 +439,71 @@ function accueil_connecte(){
             return $accueil_connecte;
     
 }
+
+function editer_profil($user){
+    ob_start();
+    ?>
+    
+        <h1 style="text-align: center">EDITER SON PROFIL</h1> <br> <br>
+            <fieldset>
+            <form method="POST" action="http://localhost:8888/MySmartHouse%20-%20MVC/index.php?cible=verifedition" enctype="multipart/form-data">  
+             
+            <table>
+            <br>
+            <tr>
+               <td align="left">
+               <label>Nouveau pseudo :</label>
+               </td>
+               <td>
+               <input type="text" name="newpseudo" placeholder="Pseudo" value="<?php echo $user['pseudo']; ?>" />
+               </td>
+            </tr>
+
+            <tr>
+               <td align="left">
+               <label>Nouveau mail :</label>
+               </td>
+               <td>
+               <input type="text" name="newmail" placeholder="Mail" value ="<?php echo $user['mail']; ?>" />
+               </td>
+
+            <tr>
+               <td align="left">
+               <label>Nouveau mot de passe :</label>
+               </td>
+               <td>
+               <input type="password" name="newmdp1" placeholder="Mot de passe">
+               </td>
+            </tr>
+
+            <tr>
+               <td align="left">
+               <label>Confirmation - nouveau mot de passe :</label>
+               </td>
+
+               <td>
+               <input type="password" name="newmdp2" placeholder="Confirmation du mot de passe" />
+               </td>
+            </tr>
+
+               </table>
+               <br>
+               <p style="text-align: center">
+                <input type="submit" value="Mettre à jour mon profil !"> 
+               </p>
+            </form>
+            <?php if(isset($msg)) { echo $msg; } ?>
+                <form>
+                <p style="text-align: center">
+                <input type="button" value="Retour" onclick="history.go(-1)">
+                </p>
+                </form>
+            </fieldset>
+   
+    <?php
+    $editer_profil = ob_get_clean();
+    return $editer_profil;
+}
+
 ?>
+

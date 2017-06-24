@@ -1,6 +1,8 @@
 <?php
+    include('Vue/commun.php');
+
     $entete = entete("MySmartHouse / Accueil non connecté");
-    $contenu = connexion();
+    $contenu = forminscription();
     $contenu .= $erreur;
     $pied = pied();
 
