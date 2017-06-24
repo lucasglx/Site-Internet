@@ -3,64 +3,38 @@ body {
     font-family: Trebuchet MS, Arial, Verdana, serif;
     background-color: #F5F5F5
 }
-#onglets{
-  display: none;
-    }
 
-#onglets li{
-  
-position: relative;
-float: left;
-list-style: none;
-  padding: 2px 5px 7px;
-  margin-right: 5px;
-  width: 150px;
-  height: 30px;
-  border: 1px solid #1175AE;
-  cursor: pointer;
-  background-image: fond.png;
-  color: #0D5995;
-  z-index: 1;
-}
+.onglets {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+     .onglets  li {
+        display: inline; /* affichage horizontal */
+      }
+      .onglets li a {
+        padding: 5px 20px;
+        margin: 0;
+        background: #98B924;
+        color: #fff;
+        border: 1px solid #89a;
+        text-decoration: none;
+        -moz-border-radius: 10px 10px 0 0;
+        -webkit-border-radius: 10px 10px 0 0;
+        border-radius: 10px 10px 0 0;        
+        -webkit-border-top-left-radius: 10px; /* pour Chrome */
+        -webkit-border-top-right-radius: 10px; /* pour Chrome */
+        
+      }
+     .onglets  li a:hover,.onglets  li a:focus {
+        background: #b8da40;
+        color: #000;
+      }
+.para{
 
-
-
-#onglets .actif{
-
-  border-bottom: none;
-  font-weight: bold;
-  z-index: 10;
-    
-}
-
-#contenu
-
-{
-  clear: both;
-  position: relative;
-  margin: 0 20px;
-  padding: 10px;
-  border: 5px solid #0D5995;
-  z-index: 5;
-  top: -6px;
-  background-color: #EEEEEE;
-  color: #0F67A1;
-  width: 1600px;
-  height: 970px;
-  overflow
-  border-radius: 20px;
-
-}
-
-.contenu{
-
-  width: 500px;
-  margin:100 px auto;
-  padding: 50px;
-  border-width:20px;
   float: right;
+  width: 50px;
 }
-
 a, a:visited {
   text-decoration:none;
   outline:none;
@@ -132,185 +106,4 @@ nav{
   float:left;
   width: 750px;
   height: 1000px;
-}
-.contenu
-{
- 
-    float:left;
-    width: 600px;
-    height: 1000px;
-}
-.pièce
-{
-  margin-top:50px;
-  position: absolute;
-  float: center;
-  margin-left: 535px;
-  border: 5px blue solid;
-  padding: 30px 30px 30px 30px;
-}
-figcaption
-{
-  font-weight: bold;
-}
-.caméra
-{
-  margin-top: 20px;
-  margin-left: 250px;
-  margin-right: 250px;
-  float: center;
-  border: 3px black solid; 
-  padding: 30px 30px 46px 30px;
-}
-.volet
-{
-  margin-top: 50px;
-  margin-left: -200px;
-  float: left;
-  border: 3px black solid;
-  padding:30px 20px 50px 30px;
-}
-.température
-{
-  margin-top: 20px;
-  margin-left: 30px;
-  float: left;
-  border: 3px black solid; 
-  padding: 30px 35px 30px 20px;
-}
-.mode
-{
-  margin-top: 50px;
-  margin-left: 250px;
-  margin-right: 250px;
-  float: center;
-  border: 3px black solid;
-  padding:30px 30px 17px 30px;
-
-}
-.option
-{
-  margin-top: 10px;
-  padding: 20px 30px 30px 30px;
-  border: 3px black solid;
-}
-.option.img
-{
-  float: left;
-}
-h3
-{
-  font-style:italic;
-  font-size: 10px;
-  float:center;
-}
-h1
-{
-  font-weight: bold;
-  font-size: 20px;
-
-}
-.cmn-toggle {
-    position: absolute;
-    margin-left: -9999px;
-    visibility: hidden;
-  }
-  .cmn-toggle + label {
-    float:right;
-    display: block;
-    position: relative;
-    bottom: 90px;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-  }
-  input.cmn-toggle-round + label {
-    padding: 2px;
-    width: 120px;
-    height: 60px;
-    background-color: #dddddd;
-    border-radius: 60px;
-  }
-  input.cmn-toggle-round + label:before,
-  input.cmn-toggle-round + label:after {
-    display: block;
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    bottom: 1px;
-    content: "";
-  }
-  input.cmn-toggle-round + label:before {
-    right: 1px;
-    background-color: #f1f1f1;
-    border-radius: 60px;
-    transition: background 0.4s;
-  }
-  input.cmn-toggle-round + label:after {
-    width: 58px;
-    background-color: #fff;
-    border-radius: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: margin 0.4s;
-  }
-  input.cmn-toggle-round:checked + label:before {
-    background-color: #8ce196;
-  }
-  input.cmn-toggle-round:checked + label:after {
-    margin-left: 60px;
-  }
-
-.logoentreprisecontact {
-    float: left;
-    vertical-align:middle;
-    max-width: 150px; 
-    max-height: 150px;
-    margin-right: 10px; 
-    margin-top: 0px;
-}
-
-.contacteznous {
-    text-align: center
-}
-
-.contact {
-    border-radius: 8px;
-    border: solid;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align:text-bottom;
-}
-
-.foireauxquestions {
-    text-align: center;
-}
-
-.logoentreprisefaq {
-    float: left;
-    vertical-align:middle;
-}
-
-.configuration maison {
-    text-align: center;
-}
-
-h2 { 
-  color:black;
-  font-weight: bold;
-  margin-left: 40px;
-  margin-right: 40px; 
-}
-
-
-.work {
-  vertical-align:top;
-  display:inline-block;
-  margin-right: 20px;
-  margin-left: 80px;
-}
-
-iframe { 
-text-align: center;
 }
